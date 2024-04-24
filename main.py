@@ -24,7 +24,7 @@ image = orig.copy()
 image = imutils.resize(image, height=800)
 ratio = orig.shape[1] / float(image.shape[1])
 
-model = YOLO('best.pt')
+model = YOLO('nanobest.pt')
 names = model.model.names
 results = model.predict(image, conf=0.4)  #Adjust conf threshold
 contours = results[0].masks.xy
